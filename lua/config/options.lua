@@ -28,3 +28,4 @@ vim.opt.mouse = "a"
 vim.opt.fillchars = { eob = " " }
 vim.opt.shortmess:append("sI")
 vim.opt.laststatus = 3
+vim.opt.showtabline = 0

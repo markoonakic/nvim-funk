@@ -24,9 +24,7 @@ return {
       separator_style = "default",
     },
     tabufline = {
-      enabled = true,
-      lazyload = true,
-      order = { "treeOffset", "buffers", "tabs", "btns" },
+      enabled = false,
     },
   },
 
