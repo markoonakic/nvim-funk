@@ -50,9 +50,9 @@ return {
       ui = {
         position = "center",
         open_win_override = {
-          border = "rounded",
+          border = vim.o.winborder ~= "" and vim.o.winborder or "single",
           title = " Buffers ",
-          title_pos = "center",
+          title_pos = "left",
         },
       },
     },
