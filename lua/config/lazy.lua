@@ -29,6 +29,7 @@ require("lazy").setup({
     { import = "plugins.treesitter" },
     { import = "plugins.lsp" },
     { import = "plugins.completion" },
+    { import = "plugins.formatting" },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = false, notify = false },
