@@ -24,6 +24,7 @@ require("lazy").setup({
     { import = "plugins.sessions" },
     { import = "plugins.support" },
     { import = "plugins.editor" },
+    { import = "plugins.git" },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = false, notify = false },
