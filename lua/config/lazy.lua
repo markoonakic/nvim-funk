@@ -21,6 +21,7 @@ require("lazy").setup({
     { import = "plugins.ui" },
     { import = "plugins.snacks" },
     { import = "plugins.navigation" },
+    { import = "plugins.sessions" },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = false, notify = false },
