@@ -35,3 +35,17 @@ vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split vertical" })
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split horizontal" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Equalize splits" })
 vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close split" })
+
+vim.keymap.set({ "n", "t" }, "<A-t>", function()
+  Snacks.terminal.toggle(nil, {
+    win = { style = "terminal_float" },
+  })
+end, { desc = "Toggle floating terminal" })
+
+vim.keymap.set({ "n", "t" }, "<leader>lg", function()
+  Snacks.lazygit.open()
+end, { desc = "Open LazyGit" })
+
+vim.keymap.set({ "n", "t" }, "<leader>ll", function()
+  Snacks.lazygit.log()
+end, { desc = "Open LazyGit log" })

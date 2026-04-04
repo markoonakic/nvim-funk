@@ -44,7 +44,12 @@ return {
       "                            ",
     },
     buttons = {
+      { txt = " Find File", keys = "f", cmd = "lua require('fff').find_files()" },
+      { txt = "󱎸 Live Grep", keys = "g", cmd = "lua require('fff').live_grep()" },
+      { txt = "󰦛 Restore Session", keys = "r", cmd = "AutoSession restore" },
+      { txt = " Pick Session", keys = "R", cmd = "AutoSession search" },
       { txt = " New File", keys = "n", cmd = "ene | startinsert" },
+      { txt = " LazyGit", keys = "l", cmd = "lua Snacks.lazygit.open()" },
       { txt = "󰒲 Lazy", keys = "L", cmd = "Lazy" },
       { txt = " Mason", keys = "m", cmd = "Mason" },
       { txt = " Quit", keys = "q", cmd = "qa" },
