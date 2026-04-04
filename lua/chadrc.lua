@@ -30,7 +30,7 @@ return {
   },
 
   nvdash = {
-    load_on_startup = true,
+    load_on_startup = #vim.api.nvim_list_uis() > 0,
     header = {
       "                            ",
       "     ▄▄         ▄ ▄▄▄▄▄▄▄   ",
