@@ -6,6 +6,7 @@ require("config.options")
 require("config.keymaps")
 require("config.autocmds")
 require("config.lazy")
+require("dashboard.animation")
 
 local cache = vim.g.base46_cache
 local uv = vim.uv or vim.loop
