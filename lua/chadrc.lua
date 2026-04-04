@@ -5,6 +5,7 @@ return {
     transparency = true,
     hl_add = {
       NvDashPluginStats = { fg = "#fb4934" },
+      SnipeTitle = { fg = "#ebdbb2", bg = "NONE", bold = true },
     },
     hl_override = {},
     integrations = {},

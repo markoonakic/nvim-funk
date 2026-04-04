@@ -51,7 +51,7 @@ return {
         position = "center",
         open_win_override = {
           border = vim.o.winborder ~= "" and vim.o.winborder or "single",
-          title = " Buffers ",
+          title = { { " Buffers ", "SnipeTitle" } },
           title_pos = "left",
         },
       },
