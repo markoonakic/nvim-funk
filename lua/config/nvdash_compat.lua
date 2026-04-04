@@ -2,7 +2,14 @@ local M = {}
 
 local function sanitize_tab_buffers()
   local bufs = vim.t.bufs
-  if type(bufs) ~= "table" or #bufs == 0 then
+  if type(bufs) ~= "table" then
+    bufs = vim.tbl_filter(function(buf)
+      return vim.api.nvim_buf_is_valid(buf) and vim.fn.buflisted(buf) == 1
+    end, vim.api.nvim_list_bufs())
+  end
+
+  if #bufs == 0 then
+    vim.t.bufs = {}
     return
   end
 
