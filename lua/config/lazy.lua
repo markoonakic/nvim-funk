@@ -23,6 +23,7 @@ require("lazy").setup({
     { import = "plugins.navigation" },
     { import = "plugins.sessions" },
     { import = "plugins.support" },
+    { import = "plugins.editor" },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = false, notify = false },
