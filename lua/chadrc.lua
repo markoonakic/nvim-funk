@@ -32,18 +32,9 @@ return {
 
   nvdash = {
     load_on_startup = #vim.api.nvim_list_uis() > 0,
-    header = {
-      "                            ",
-      "     ▄▄         ▄ ▄▄▄▄▄▄▄   ",
-      "   ▄▀███▄     ▄██ █████▀    ",
-      "   ██▄▀███▄   ███           ",
-      "   ███  ▀███▄ ███           ",
-      "   ███    ▀██ ███           ",
-      "   ███      ▀ ███           ",
-      "   ▀██ █████▄▀█▀▄██████▄    ",
-      "     ▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀   ",
-      "                            ",
-    },
+    header = function()
+      return require("dashboard.header").get()
+    end,
     buttons = {
       { txt = " Find File", keys = "f", cmd = "lua require('fff').find_files()" },
       { txt = "󱎸 Live Grep", keys = "g", cmd = "lua require('fff').live_grep()" },
