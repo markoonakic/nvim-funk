@@ -18,19 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    { import = "plugins.ui" },
-    { import = "plugins.snacks" },
-    { import = "plugins.navigation" },
-    { import = "plugins.sessions" },
-    { import = "plugins.support" },
-    { import = "plugins.editor" },
-    { import = "plugins.git" },
-    { import = "plugins.diagnostics" },
-    { import = "plugins.treesitter" },
-    { import = "plugins.lsp" },
-    { import = "plugins.completion" },
-    { import = "plugins.formatting" },
-    { import = "plugins.markdown" },
+    { import = "plugins" },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = false, notify = false },
