@@ -53,16 +53,19 @@ function M.setup()
       if client.name == "markdown_oxide" then
         vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "InsertLeave" }, {
           buffer = buf,
-          callback = vim.lsp.codelens.refresh,
+          callback = function()
+            vim.lsp.codelens.enable(true, { bufnr = buf })
+          end,
         })
 
         if vim.fn.exists(":Daily") == 0 then
           vim.api.nvim_create_user_command("Daily", function(opts)
             local command = opts.args ~= "" and ("daily " .. opts.args) or "daily"
-            vim.lsp.buf.execute_command({
+            client:exec_cmd({
+              title = ("Markdown-Oxide-%s"):format(command),
               command = "jump",
               arguments = { command },
-            })
+            }, { bufnr = buf })
           end, { nargs = "?" })
         end
       elseif client.name == "ltex" then
