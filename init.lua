@@ -17,7 +17,7 @@ if ok_base46 and (vim.fn.isdirectory(cache) == 0 or #vim.fn.readdir(cache) == 0)
 end
 
 if vim.fn.isdirectory(cache) == 1 then
-  for _, name in ipairs({ "defaults", "statusline" }) do
+  for _, name in ipairs({ "syntax", "defaults", "statusline" }) do
     local file = cache .. name
     if uv.fs_stat(file) then
       dofile(file)
