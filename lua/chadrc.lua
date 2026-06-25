@@ -7,7 +7,10 @@ return {
       NvDashPluginStats = { fg = "#fb4934" },
       SnipeTitle = { fg = "#ebdbb2", bg = "NONE", bold = true },
     },
-    hl_override = {},
+    hl_override = {
+      NvDashAscii = { fg = "dark_purple" },
+      NvDashButtons = { fg = "white" },
+    },
     integrations = {},
     changed_themes = {},
   },
